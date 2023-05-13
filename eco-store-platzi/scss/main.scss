@@ -1,0 +1,196 @@
+$primary-color: #FFEFE7;
+$secondary-color: #FFDAC6;
+$Tertiary-color: #BABD8D;
+$primary-text-color: #7C6A0A;
+$font-stack: 'IBM Plex Sans',
+sans-serif;
+$paragraph-size:'1.5em';
+$quaternary-color: #E86424;
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: $primary-color;
+    font-family: $font-stack;
+}
+
+nav {
+    width: auto;
+    height: 100px;
+    display: flex;
+    /* Para agrupar elementos de forma horizontal */
+    justify-content: space-between;
+    /* Para dejar un espacio entre dos items */
+    color: $primary-text-color;
+    padding: 15px;
+}
+
+
+nav {
+    p {
+        font-size: 2em;
+        padding-left: 30px;
+        margin-top: 40px;
+
+    }
+
+
+
+
+    .icons {
+        display: flex;
+        /* Para agrupar elementos de forma horizontal */
+        gap: 15px;
+
+        /* Propiedad para manejar los espaciados entre los elementos*/
+        button {
+            background: none;
+            border-style: none;
+
+        }
+
+    }
+}
+
+article {
+    width: auto;
+    color: $primary-text-color;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+
+    .impact-section {
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        gap: 25px;
+    }
+
+    h1 {
+        font-size: 3em;
+        /* Brinda tamaño al texto */
+        padding: 0px;
+        margin: 0px
+    }
+
+    p {
+        font-size: $paragraph-size;
+    }
+
+    button {
+        width: 12vw;
+        padding: 20px;
+        background-color: $quaternary-color;
+        border-style: none;
+        border-radius: 35px;
+        color: white;
+        font-size: 1em;
+
+    }
+
+    img {
+        width: 25vw;
+        border-radius: 19px;
+    }
+
+
+}
+
+
+main {
+    background-color: $primary-color;
+}
+
+section {
+    width: auto;
+    height: auto;
+
+    padding: 60px;
+
+    h2 {
+        color: $primary-text-color;
+        font-size: 2em;
+    }
+
+    .healthcare {
+        padding-bottom: 60px;
+
+        h2 {
+            font-weight: 300;
+            padding-bottom: 60px;
+        }
+
+        .card-section {
+            display: flex;
+            width: auto;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            column-gap: 200px;
+            /* SEPARACIÓN ENTRE COLUMNAS*/
+            row-gap: 80px;
+            /* SEPARACIÓN ENTRE FILAS*/
+        }
+
+        .product-card {
+            width: 14vw;
+            /* Esta es una medida responsiva que se va adaptando al tamaño de la pantalla*/
+            height: 45vh;
+            background: $secondary-color;
+            color: $primary-text-color;
+            padding: 20px;
+            border-radius: 8px;
+
+            .icon {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: flex-end;
+                padding-bottom: 12px;
+
+                svg {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+
+            .product-image {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 12vw;
+                    height: 30vh;
+                    object-fit: cover;
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+
+    .furniture {
+        @extend .healthcare;
+
+        /*aplicando herencia de la clase healthcare*/
+
+        .product-card {
+            background: $Tertiary-color;
+            color: whitesmoke;
+        }
+
+    }
+}
+
+
+footer {
+    $background: #E86424;
+    background-color: $background;
+    width: 100%;
+    height: 250px;
+}
